@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
 @Mod(modid = Tanning.MODID, name = Tanning.MODNAME, version = Tanning.VERSION, acceptableRemoteVersions = "*")
 public class Tanning {
@@ -28,7 +29,9 @@ public class Tanning {
 
 	public static int duration = 500;
 
-	public static final Item TANNED_LEATHER = new Item();
+	public static final Item TANNED_LEATHER = new Item().setTranslationKey(MODID + ".tanned_leather");
+	@ObjectHolder("tanning:tanning_station")
+	public static final TannerBlock TANNING_STATION = null;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e) throws Exception {

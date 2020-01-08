@@ -1,4 +1,4 @@
-package shadows.tanning;
+	package shadows.tanning;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
